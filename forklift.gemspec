@@ -6,11 +6,11 @@ require 'forklift/version'
 Gem::Specification.new do |spec|
   spec.name          = "forklift"
   spec.version       = Forklift::VERSION
-  spec.authors       = ["Lawrence Lin"]
-  spec.email         = ["deduce@gmail.com"]
+  spec.authors       = ["Yi-Ru Lin"]
+  spec.email         = ["lawrence@polydice.com"]
   spec.description   = %q{TODO: Write a gem description}
   spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/polydice/forklift"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -20,4 +20,8 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
+
+  spec.add_dependency 'faraday', '~> 0.8'
+  spec.add_dependency 'faraday_middleware', '~> 0.9'
+  spec.add_dependency 'ox', '~> 2.0.5'
 end
