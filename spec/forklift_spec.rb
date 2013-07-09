@@ -2,9 +2,9 @@
 require 'helper'
 
 describe Forklift do
-  after do
-    Forklift.reset
-  end
+  #after do
+  #  Forklift.reset
+  #end
 
   describe ".respond_to?" do
     it "is true if method exists" do
