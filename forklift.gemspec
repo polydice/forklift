@@ -23,5 +23,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'faraday', '~> 0.8'
   spec.add_dependency 'faraday_middleware', '~> 0.9'
-  spec.add_dependency 'ox', '~> 2.0.5'
+  spec.add_dependency 'multi_xml', '~> 0.5.4'
 end
