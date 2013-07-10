@@ -12,6 +12,9 @@ require 'forklift'
 require 'rspec'
 require 'webmock/rspec'
 require 'vcr'
+require 'dotenv'
+
+Dotenv.load
 
 #WebMock.disable_net_connect!(:allow => 'coveralls.io')
 

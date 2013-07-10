@@ -1,12 +1,8 @@
-require 'forklift/connection'
-require 'forklift/request'
-
-require 'forklift/client/root'
-
+require 'faraday'
+require 'forklift/version'
 
 module Forklift
-
-  class Client
+  module Configuration
     VALID_OPTIONS_KEYS = [
       :adapter,
       :faraday_config_block,
@@ -18,33 +14,51 @@ module Forklift
       :auto_traversal,
       :user_agent].freeze
 
-    attr_accessor(*VALID_OPTIONS_KEYS)
-
     DEFAULT_ADAPTER             = Faraday.default_adapter
     DEFAULT_API_VERSION         = 'v1/'
     DEFAULT_API_ENDPOINT        = 'http://tw.partner.buy.yahoo.com/api/'
     DEFAULT_USER_AGENT          = "Forklift Ruby Gem #{Forklift::VERSION}".freeze
     DEFAULT_AUTO_TRAVERSAL      = false
 
-    def initialize(init_options={})
+    attr_accessor(*VALID_OPTIONS_KEYS)
 
+    def self.extended(base)
+      base.reset
+    end
+
+    def configure
+      yield self
+    end
+
+    def options
+      VALID_OPTIONS_KEYS.inject({}){|o,k| o.merge!(k => send(k)) }
+    end
+
+    # This will append a slash on the end of 'value'.
+    def api_endpoint=(value)
+      @api_endpoint = File.join(value, "")
+    end
+
+    # This will append a slash on the end of 'value'.
+    def api_version=(value)
+      @api_version = File.join(value, "")
+    end
+
+    def faraday_config(&block)
+      @faraday_config_block = block
+    end
+
+    def reset
       self.adapter             = DEFAULT_ADAPTER
       self.api_version         = DEFAULT_API_VERSION
       self.api_endpoint        = DEFAULT_API_ENDPOINT
+      self.proxy               = nil
+      self.api_version         = nil
+      self.api_key             = nil
+      self.shared_secret       = nil
       self.user_agent          = DEFAULT_USER_AGENT
       self.auto_traversal      = DEFAULT_AUTO_TRAVERSAL
-
-      VALID_OPTIONS_KEYS.each do |key|
-        send("#{key}=", init_options[key]) unless init_options[key].nil?
-      end
     end
-
-    include Forklift::Connection
-    include Forklift::Request
-    include Forklift::Client::Root
-    #include Forklift::Client::Sections
-    #include Forklift::Client::Sites
-    #include Forklift::Client::Categories
-    #include Forklift::Client::Subcategories
   end
 end
+

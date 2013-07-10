@@ -18,6 +18,7 @@ group :test do
   gem 'webmock', '1.11'
   gem 'test-queue'
   gem 'vcr'
+  gem 'dotenv'
 end
 
 # Specify your gem's dependencies in forklift.gemspec

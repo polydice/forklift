@@ -14,17 +14,15 @@ module Faraday
       # 501 => Forklift::NotImplemented,
       # 502 => Forklift::BadGateway,
       # 503 => Forklift::ServiceUnavailable
-      Forklift::ParameterError,
-      Forklift::ApiOverused,
-      Forklift::NoPermission,
-      Forklift::SignatureError
+      "\n  parameter error\n"                               => Forklift::ParameterError,
+      "\n  API OVERUSED\n"                                  => Forklift::ApiOverused,
+      "\n  no permission to request!\n"                     => Forklift::NoPermission,
+      "\n  signature was not match or timestamp is over!\n" => Forklift::SignatureError
     }
 
     def on_complete(response)
-      # response
-
-      # key = response[:status].to_i
-      # raise ERROR_MAP[key].new(response) if ERROR_MAP.has_key? key
+      key = response[:body]["errors"]
+      raise ERROR_MAP[key].new(response) if ERROR_MAP.has_key? key
     end
   end
 end

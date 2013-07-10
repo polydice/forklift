@@ -1,4 +1,5 @@
 require "forklift/version"
+require "forklift/error"
 require "forklift/client"
 
 module Forklift
