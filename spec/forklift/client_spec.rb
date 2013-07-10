@@ -11,7 +11,7 @@ describe Forklift::Client do
       expect(@client.get_catalog(no: 1, level_no: 2)).to be_a Hash
     end
 
-    it "has a key - categories" do
+    it "has categories as key" do
       expect(@client.get_catalog(no: 1, level_no: 2).has_key?("categories")).to eq(true)
     end
   end

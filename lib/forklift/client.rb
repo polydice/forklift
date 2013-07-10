@@ -1,7 +1,10 @@
 require 'forklift/connection'
 require 'forklift/request'
 
-require 'forklift/client/root'
+require 'forklift/client/sections'
+require 'forklift/client/sites'
+require 'forklift/client/categories'
+require 'forklift/client/subcategories'
 
 
 module Forklift
@@ -41,10 +44,10 @@ module Forklift
 
     include Forklift::Connection
     include Forklift::Request
-    include Forklift::Client::Root
-    #include Forklift::Client::Sections
-    #include Forklift::Client::Sites
-    #include Forklift::Client::Categories
-    #include Forklift::Client::Subcategories
+    #include Forklift::Client::Root
+    include Forklift::Client::Sections
+    include Forklift::Client::Sites
+    include Forklift::Client::Categories
+    include Forklift::Client::Subcategories
   end
 end
