@@ -15,6 +15,8 @@ require 'vcr'
 require 'dotenv'
 
 Dotenv.load
+ENV["API_KEY"]       ||= "thisisisapikey"
+ENV["SHARED_SECRET"] ||= "thisisisisisshared_secret"
 
 #WebMock.disable_net_connect!(:allow => 'coveralls.io')
 
