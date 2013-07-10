@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 10 Jul 2013 09:23:43 GMT
+      - Wed, 10 Jul 2013 10:16:14 GMT
       P3p:
       - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
         TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
@@ -38,12 +38,12 @@ http_interactions:
       encoding: UTF-8
       string: |
         <?xml version='1.0' encoding='utf-8'?>
-              <currentTime>1373448223</currentTime><!-- ptnrf5.shp.tw1.yahoo.com compressed/chunked Wed Jul 10 17:23:43 CST 2013 -->
+              <currentTime>1373451374</currentTime><!-- ptnrf6.shp.tw1.yahoo.com compressed/chunked Wed Jul 10 18:16:14 CST 2013 -->
     http_version: 
-  recorded_at: Wed, 10 Jul 2013 09:23:43 GMT
+  recorded_at: Wed, 10 Jul 2013 10:16:14 GMT
 - request:
     method: get
-    uri: http://tw.partner.buy.yahoo.com/api/v1/getCatalog?level_no=0&no=0&pkey=f1a44ca958229205e7894070f0433f7c&signature=95fc511a255cdfcfe457d71754322e018d751ee3&ts=1373448223
+    uri: http://tw.partner.buy.yahoo.com/api/v1/getCatalog?level_no=0&no=0&pkey=f1a44ca958229205e7894070f0433f7c&signature=8e9e9d37b326a30e61b4e2f0912ce75bfa5f9fe1&ts=1373451374
     body:
       encoding: US-ASCII
       string: ''
@@ -60,7 +60,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 10 Jul 2013 09:23:43 GMT
+      - Wed, 10 Jul 2013 10:16:14 GMT
       P3p:
       - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
         TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
@@ -207,8 +207,8 @@ http_interactions:
         ZWxfbm8+CiAgICAgICAgPG5hbWU+PCFbQ0RBVEFb6YGL5YuV44CB5oi25aSW
         44CB56Wo5Yi4XV0+PC9uYW1lPgogICAgICAgIDx0eXBlPjwhW0NEQVRBW+WN
         gF1dPjwvdHlwZT4KCQkJPC9jYXRlZ29yeT4KPC9jYXRlZ29yaWVzPgogCjwh
-        LS0gcHRucmY2LnNocC50dzEueWFob28uY29tIGNvbXByZXNzZWQvY2h1bmtl
-        ZCBXZWQgSnVsIDEwIDE3OjIzOjQzIENTVCAyMDEzIC0tPgo=
+        LS0gcHRucmY1LnNocC50dzEueWFob28uY29tIGNvbXByZXNzZWQvY2h1bmtl
+        ZCBXZWQgSnVsIDEwIDE4OjE2OjE0IENTVCAyMDEzIC0tPgo=
     http_version: 
-  recorded_at: Wed, 10 Jul 2013 09:23:43 GMT
+  recorded_at: Wed, 10 Jul 2013 10:16:14 GMT
 recorded_with: VCR 2.5.0

@@ -5,6 +5,7 @@ require 'forklift/client/sections'
 require 'forklift/client/sites'
 require 'forklift/client/categories'
 require 'forklift/client/subcategories'
+require 'forklift/client/gds'
 
 
 module Forklift
@@ -49,5 +50,6 @@ module Forklift
     include Forklift::Client::Sites
     include Forklift::Client::Categories
     include Forklift::Client::Subcategories
+    include Forklift::Client::Gds
   end
 end
