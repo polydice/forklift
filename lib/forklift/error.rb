@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Forklift
   # Custom error class for rescuing from all GitHub errors
   class Error < StandardError

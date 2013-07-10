@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'forklift/connection'
 require 'forklift/request'
 

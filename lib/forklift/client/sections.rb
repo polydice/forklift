@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Forklift
   class Client
     module Sections

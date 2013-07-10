@@ -18,7 +18,29 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Get all sections / sites / categories / subcategories
+
+
+```ruby
+client = Forklift.new(api_key: 'xxxx', shared_secret: 'axxxx')
+# Get all sections under the root.
+sections = client.sections # => {"count" => 123, "category" => [{"no" => 1, "level_no" => 1, ...}, {...}, ...]}
+
+# Get all sites under a specified section.
+sites = client.sites(sections["category"].first)
+# Or pass the parent no.
+sites = client.sites(no: 123)
+
+# Similarly to categories, subcategories ...
+subcategories = client.subcategories(no: 345)
+```
+
+### Get all goods under certain category
+
+```ruby
+client = Forklift.new(api_key: 'xxxx', shared_secret: 'axxxx')
+gds = client.gds({no: 26, level_no: 1})
+```
 
 ## Contributing
 

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'faraday_middleware'
 require 'faraday/response/raise_forklift_error'
 
