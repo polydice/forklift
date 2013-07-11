@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Forklift
   module Utils
     # data = {"count" => 123, "gd" => [...]}
