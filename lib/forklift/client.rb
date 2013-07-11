@@ -2,7 +2,7 @@
 require 'forklift/connection'
 require 'forklift/request'
 
-require 'forklift/client/gds'
+require 'forklift/client/gd'
 require 'forklift/client/catalog'
 
 
@@ -47,6 +47,10 @@ module Forklift
       return Forklift::Client::Catalog.new(self, catalog)
     end
 
+    def create_gd(gd)
+      return Forklift::Client::Gd.new(self, gd)
+    end
+
     # Alias for getting the sub-categories of certain category.
     # e.g. sites of certain section, categories of certain site
     def going_down(parent_hash={no: 0, level_no: 0})
@@ -76,7 +80,7 @@ module Forklift
 
     include Forklift::Connection
     include Forklift::Request
-    include Forklift::Client::Gds
+    #include Forklift::Client::Gds
     #include Forklift::Client::Root
     #include Forklift::Client::Sections
     #include Forklift::Client::Sites

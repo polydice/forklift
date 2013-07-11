@@ -19,6 +19,16 @@ module Forklift
         end
         return result
       end
+
+      def unboxing
+        data = @client.unboxing(no: @no, level_no: @level_no)
+        result = {}
+        result[:count] = data["count"]
+        result[:gd]    = data["gd"].map do |gd_hash|
+          @client.create_gd(gd_hash)
+        end
+        return result
+      end
     end
   end
 end

@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 11 Jul 2013 04:34:32 GMT
+      - Thu, 11 Jul 2013 08:33:43 GMT
       P3p:
       - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
         TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
@@ -38,12 +38,12 @@ http_interactions:
       encoding: UTF-8
       string: |
         <?xml version='1.0' encoding='utf-8'?>
-              <currentTime>1373517272</currentTime><!-- ptnrf5.shp.tw1.yahoo.com compressed/chunked Thu Jul 11 12:34:32 CST 2013 -->
+              <currentTime>1373531623</currentTime><!-- ptnrf6.shp.tw1.yahoo.com compressed/chunked Thu Jul 11 16:33:43 CST 2013 -->
     http_version: 
-  recorded_at: Thu, 11 Jul 2013 04:34:32 GMT
+  recorded_at: Thu, 11 Jul 2013 08:33:43 GMT
 - request:
     method: get
-    uri: http://tw.partner.buy.yahoo.com/api/v1/getCatalog?no=0&pkey=f1a44ca958229205e7894070f0433f7c&signature=f8d306c9969b1626ec793f46585d35a8c5d03f50&ts=1373517272
+    uri: http://tw.partner.buy.yahoo.com/api/v1/getCatalog?no=0&pkey=f1a44ca958229205e7894070f0433f7c&signature=1228ab8fd3c286a243fcf4c6cb57e276977a5442&ts=1373531623
     body:
       encoding: US-ASCII
       string: ''
@@ -60,7 +60,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 11 Jul 2013 04:34:32 GMT
+      - Thu, 11 Jul 2013 08:33:43 GMT
       P3p:
       - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
         TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
@@ -82,7 +82,7 @@ http_interactions:
         <errors>
           <![CDATA[parameter error]]>
         </errors>
-        <!-- ptnrf6.shp.tw1.yahoo.com compressed/chunked Thu Jul 11 12:34:32 CST 2013 -->
+        <!-- ptnrf5.shp.tw1.yahoo.com compressed/chunked Thu Jul 11 16:33:43 CST 2013 -->
     http_version: 
-  recorded_at: Thu, 11 Jul 2013 04:34:32 GMT
+  recorded_at: Thu, 11 Jul 2013 08:33:43 GMT
 recorded_with: VCR 2.5.0
