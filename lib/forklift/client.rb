@@ -2,11 +2,8 @@
 require 'forklift/connection'
 require 'forklift/request'
 
-require 'forklift/client/sections'
-require 'forklift/client/sites'
-require 'forklift/client/categories'
-require 'forklift/client/subcategories'
 require 'forklift/client/gds'
+require 'forklift/client/catalog'
 
 
 module Forklift
@@ -46,6 +43,10 @@ module Forklift
       end
     end
 
+    def create_catalog(catalog = {no: 0, level_no: 0, name: "", type: ""})
+      return Forklift::Client::Catalog.new(self, catalog)
+    end
+
     # Alias for getting the sub-categories of certain category.
     # e.g. sites of certain section, categories of certain site
     def going_down(parent_hash={no: 0, level_no: 0})
@@ -60,8 +61,11 @@ module Forklift
     end
 
     # Alias for Forklift.new(api_key: ..., shared_secret: ...).gds(parent_hash)
-    def unboxing(parent_hash)
-      gds(parent_hash)
+    def unboxing(parent_hash={no: 0, level_no: 0})
+      no       = parent_hash[:no]       || parent_hash["no"]
+      level_no = parent_hash[:level_no] || parent_hash["level_no"]
+
+      get_gd_info(no: no, level_no: level_no)["gds"]
     end
 
     VALID_CATALOGS.each_with_index do |name, level_no|

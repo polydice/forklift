@@ -1,0 +1,126 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://tw.partner.buy.yahoo.com/api/v1/getCurrTime
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 11 Jul 2013 06:45:46 GMT
+      P3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      Vary:
+      - Accept-Encoding
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/xml
+      Cache-Control:
+      - private
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version='1.0' encoding='utf-8'?>
+              <currentTime>1373525146</currentTime><!-- ptnrf6.shp.tw1.yahoo.com compressed/chunked Thu Jul 11 14:45:46 CST 2013 -->
+    http_version: 
+  recorded_at: Thu, 11 Jul 2013 06:45:46 GMT
+- request:
+    method: get
+    uri: http://tw.partner.buy.yahoo.com/api/v1/getCatalog?level_no=1&no=26&pkey=f1a44ca958229205e7894070f0433f7c&signature=28a59e2ad09837c48a69e0b9bb5041123c60fae0&ts=1373525146
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 11 Jul 2013 06:45:46 GMT
+      P3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      Vary:
+      - Accept-Encoding
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/xml
+      Cache-Control:
+      - private
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz4KPGNhdGVn
+        b3JpZXMgY291bnQ9IjEwIj4KICAgICA8Y2F0ZWdvcnk+CiAgICAgICAgICAg
+        ICAgIDxubz41OTQ8L25vPgogICAgICAgIDxsZXZlbF9ubz4yPC9sZXZlbF9u
+        bz4KICAgICAgICA8bmFtZT48IVtDREFUQVtUUkFWRUxFUl1dPjwvbmFtZT4K
+        ICAgICAgICA8dHlwZT48IVtDREFUQVvljYBdXT48L3R5cGU+CgkJCTwvY2F0
+        ZWdvcnk+CiAgICAgPGNhdGVnb3J5PgogICAgICAgICAgICAgICA8bm8+NjE1
+        PC9ubz4KICAgICAgICA8bGV2ZWxfbm8+MjwvbGV2ZWxfbm8+CiAgICAgICAg
+        PG5hbWU+PCFbQ0RBVEFbQW1lcmljYW4gVG91cmlzdGVyXV0+PC9uYW1lPgog
+        ICAgICAgIDx0eXBlPjwhW0NEQVRBW+WNgF1dPjwvdHlwZT4KCQkJPC9jYXRl
+        Z29yeT4KICAgICA8Y2F0ZWdvcnk+CiAgICAgICAgICAgICAgIDxubz41NTA8
+        L25vPgogICAgICAgIDxsZXZlbF9ubz4yPC9sZXZlbF9ubz4KICAgICAgICA8
+        bmFtZT48IVtDREFUQVtUaGUgTm9ydGggRmFjZV1dPjwvbmFtZT4KICAgICAg
+        ICA8dHlwZT48IVtDREFUQVvljYBdXT48L3R5cGU+CgkJCTwvY2F0ZWdvcnk+
+        CiAgICAgPGNhdGVnb3J5PgogICAgICAgICAgICAgICA8bm8+MzQwPC9ubz4K
+        ICAgICAgICA8bGV2ZWxfbm8+MjwvbGV2ZWxfbm8+CiAgICAgICAgPG5hbWU+
+        PCFbQ0RBVEFbTkJB44CBTUxC5pyN6aO+XV0+PC9uYW1lPgogICAgICAgIDx0
+        eXBlPjwhW0NEQVRBW+WtkOermV1dPjwvdHlwZT4KCQkJPC9jYXRlZ29yeT4K
+        ICAgICA8Y2F0ZWdvcnk+CiAgICAgICAgICAgICAgIDxubz4zODU8L25vPgog
+        ICAgICAgIDxsZXZlbF9ubz4yPC9sZXZlbF9ubz4KICAgICAgICA8bmFtZT48
+        IVtDREFUQVtQT05ZXV0+PC9uYW1lPgogICAgICAgIDx0eXBlPjwhW0NEQVRB
+        W+WtkOermV1dPjwvdHlwZT4KCQkJPC9jYXRlZ29yeT4KICAgICA8Y2F0ZWdv
+        cnk+CiAgICAgICAgICAgICAgIDxubz4zMzQ8L25vPgogICAgICAgIDxsZXZl
+        bF9ubz4yPC9sZXZlbF9ubz4KICAgICAgICA8bmFtZT48IVtDREFUQVtSb3lh
+        bCBFbGFzdGljc11dPjwvbmFtZT4KICAgICAgICA8dHlwZT48IVtDREFUQVvl
+        rZDnq5ldXT48L3R5cGU+CgkJCTwvY2F0ZWdvcnk+CiAgICAgPGNhdGVnb3J5
+        PgogICAgICAgICAgICAgICA8bm8+MjE5PC9ubz4KICAgICAgICA8bGV2ZWxf
+        bm8+MjwvbGV2ZWxfbm8+CiAgICAgICAgPG5hbWU+PCFbQ0RBVEFbU0tFQ0hF
+        UlNdXT48L25hbWU+CiAgICAgICAgPHR5cGU+PCFbQ0RBVEFb5a2Q56uZXV0+
+        PC90eXBlPgoJCQk8L2NhdGVnb3J5PgogICAgIDxjYXRlZ29yeT4KICAgICAg
+        ICAgICAgICAgPG5vPjU2MDwvbm8+CiAgICAgICAgPGxldmVsX25vPjI8L2xl
+        dmVsX25vPgogICAgICAgIDxuYW1lPjwhW0NEQVRBW1Nwb3J0cyBDaXR5XV0+
+        PC9uYW1lPgogICAgICAgIDx0eXBlPjwhW0NEQVRBW+WtkOermV1dPjwvdHlw
+        ZT4KCQkJPC9jYXRlZ29yeT4KICAgICA8Y2F0ZWdvcnk+CiAgICAgICAgICAg
+        ICAgIDxubz4zNjg8L25vPgogICAgICAgIDxsZXZlbF9ubz4yPC9sZXZlbF9u
+        bz4KICAgICAgICA8bmFtZT48IVtDREFUQVvlvLfnlJ/pgYvli5XnlKjlk4Fd
+        XT48L25hbWU+CiAgICAgICAgPHR5cGU+PCFbQ0RBVEFb5Y2AXV0+PC90eXBl
+        PgoJCQk8L2NhdGVnb3J5PgogICAgIDxjYXRlZ29yeT4KICAgICAgICAgICAg
+        ICAgPG5vPjI1Njwvbm8+CiAgICAgICAgPGxldmVsX25vPjI8L2xldmVsX25v
+        PgogICAgICAgIDxuYW1lPjwhW0NEQVRBW+atkOmDvee0jV1dPjwvbmFtZT4K
+        ICAgICAgICA8dHlwZT48IVtDREFUQVvljYBdXT48L3R5cGU+CgkJCTwvY2F0
+        ZWdvcnk+CjwvY2F0ZWdvcmllcz4KIAo8IS0tIHB0bnJmNS5zaHAudHcxLnlh
+        aG9vLmNvbSBjb21wcmVzc2VkL2NodW5rZWQgVGh1IEp1bCAxMSAxNDo0NTo0
+        NiBDU1QgMjAxMyAtLT4K
+    http_version: 
+  recorded_at: Thu, 11 Jul 2013 06:45:46 GMT
+recorded_with: VCR 2.5.0
