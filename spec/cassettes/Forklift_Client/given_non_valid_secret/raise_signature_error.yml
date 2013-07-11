@@ -1,0 +1,88 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://tw.partner.buy.yahoo.com/api/v1/getCurrTime
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 11 Jul 2013 04:31:56 GMT
+      P3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      Vary:
+      - Accept-Encoding
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/xml
+      Cache-Control:
+      - private
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version='1.0' encoding='utf-8'?>
+              <currentTime>1373517116</currentTime><!-- ptnrf5.shp.tw1.yahoo.com compressed/chunked Thu Jul 11 12:31:56 CST 2013 -->
+    http_version: 
+  recorded_at: Thu, 11 Jul 2013 04:31:56 GMT
+- request:
+    method: get
+    uri: http://tw.partner.buy.yahoo.com/api/v1/getCatalog?level_no=0&no=0&pkey=f1a44ca958229205e7894070f0433f7c&signature=954d088e1aa04dacea2ab8302a7284ba541dca64&ts=1373517116
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 11 Jul 2013 04:31:56 GMT
+      P3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      Vary:
+      - Accept-Encoding
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/xml
+      Cache-Control:
+      - private
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="utf-8"?>
+        <errors>
+          <![CDATA[signature was not match or timestamp is over!]]>
+        </errors>
+        <!-- ptnrf6.shp.tw1.yahoo.com compressed/chunked Thu Jul 11 12:31:56 CST 2013 -->
+    http_version: 
+  recorded_at: Thu, 11 Jul 2013 04:31:56 GMT
+recorded_with: VCR 2.5.0

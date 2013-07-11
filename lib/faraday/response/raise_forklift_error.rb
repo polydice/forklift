@@ -18,7 +18,8 @@ module Faraday
       "\n  parameter error\n"                               => Forklift::ParameterError,
       "\n  API OVERUSED\n"                                  => Forklift::ApiOverused,
       "\n  no permission to request!\n"                     => Forklift::NoPermission,
-      "\n  signature was not match or timestamp is over!\n" => Forklift::SignatureError
+      "\n  signature was not match or timestamp is over!\n" => Forklift::SignatureError,
+      "\n  code:302,desc:system error\n"                    => Forklift::SystemError
     }
 
     def on_complete(response)

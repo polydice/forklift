@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
 require 'helper'
 
-describe Forklift::Client::Sections do
+describe Forklift::Client do
 
   before :each do
     @client = Forklift.new(api_key: ENV["API_KEY"], shared_secret: ENV["SHARED_SECRET"])

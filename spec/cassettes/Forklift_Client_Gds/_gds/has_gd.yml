@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 10 Jul 2013 10:16:12 GMT
+      - Thu, 11 Jul 2013 04:20:30 GMT
       P3p:
       - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
         TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
@@ -38,12 +38,12 @@ http_interactions:
       encoding: UTF-8
       string: |
         <?xml version='1.0' encoding='utf-8'?>
-              <currentTime>1373451372</currentTime><!-- ptnrf6.shp.tw1.yahoo.com compressed/chunked Wed Jul 10 18:16:12 CST 2013 -->
+              <currentTime>1373516430</currentTime><!-- ptnrf5.shp.tw1.yahoo.com compressed/chunked Thu Jul 11 12:20:30 CST 2013 -->
     http_version: 
-  recorded_at: Wed, 10 Jul 2013 10:16:12 GMT
+  recorded_at: Thu, 11 Jul 2013 04:20:30 GMT
 - request:
     method: get
-    uri: http://tw.partner.buy.yahoo.com/api/v1/getGdInfo?level_no=1&no=26&pkey=f1a44ca958229205e7894070f0433f7c&signature=e45b214176d416591488dfa8b69bd59c327ea741&ts=1373451372
+    uri: http://tw.partner.buy.yahoo.com/api/v1/getGdInfo?level_no=1&no=26&pkey=f1a44ca958229205e7894070f0433f7c&signature=ef1df89e0e6a7a5d80141fe2e9cb924768e0be81&ts=1373516430
     body:
       encoding: US-ASCII
       string: ''
@@ -60,7 +60,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 10 Jul 2013 10:16:12 GMT
+      - Thu, 11 Jul 2013 04:20:30 GMT
       P3p:
       - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
         TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
@@ -1401,9 +1401,9 @@ http_interactions:
         QVRBWzU3MzE5XV0+PC9zdWJjYXRfbm8+CiAgICAgICAgPGNhdF9ubz48IVtD
         REFUQVs2MjA0XV0+PC9jYXRfbm8+CiAgICAgICAgPHN1Yl9ubz48IVtDREFU
         QVszODVdXT48L3N1Yl9ubz4KICAgICAgICA8em9uZV9ubz48IVtDREFUQVsw
-        XV0+PC96b25lX25vPgoJCQk8L2dkPgo8L2dkcz4KIAo8IS0tIHB0bnJmNS5z
-        aHAudHcxLnlhaG9vLmNvbSBjb21wcmVzc2VkL2NodW5rZWQgV2VkIEp1bCAx
-        MCAxODoxNjoxMiBDU1QgMjAxMyAtLT4K
+        XV0+PC96b25lX25vPgoJCQk8L2dkPgo8L2dkcz4KIAo8IS0tIHB0bnJmNi5z
+        aHAudHcxLnlhaG9vLmNvbSBjb21wcmVzc2VkL2NodW5rZWQgVGh1IEp1bCAx
+        MSAxMjoyMDozMCBDU1QgMjAxMyAtLT4K
     http_version: 
-  recorded_at: Wed, 10 Jul 2013 10:16:13 GMT
+  recorded_at: Thu, 11 Jul 2013 04:20:31 GMT
 recorded_with: VCR 2.5.0

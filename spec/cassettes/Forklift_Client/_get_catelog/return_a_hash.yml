@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 10 Jul 2013 10:16:14 GMT
+      - Thu, 11 Jul 2013 04:20:32 GMT
       P3p:
       - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
         TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
@@ -38,12 +38,12 @@ http_interactions:
       encoding: UTF-8
       string: |
         <?xml version='1.0' encoding='utf-8'?>
-              <currentTime>1373451374</currentTime><!-- ptnrf5.shp.tw1.yahoo.com compressed/chunked Wed Jul 10 18:16:14 CST 2013 -->
+              <currentTime>1373516432</currentTime><!-- ptnrf6.shp.tw1.yahoo.com compressed/chunked Thu Jul 11 12:20:32 CST 2013 -->
     http_version: 
-  recorded_at: Wed, 10 Jul 2013 10:16:14 GMT
+  recorded_at: Thu, 11 Jul 2013 04:20:32 GMT
 - request:
     method: get
-    uri: http://tw.partner.buy.yahoo.com/api/v1/getCatalog?level_no=2&no=1&pkey=f1a44ca958229205e7894070f0433f7c&signature=c26341051504841272a6069aa9ccadc44407a801&ts=1373451374
+    uri: http://tw.partner.buy.yahoo.com/api/v1/getCatalog?level_no=2&no=1&pkey=f1a44ca958229205e7894070f0433f7c&signature=f4c52a83f84640625480e42c365a0a1a0f4502e5&ts=1373516432
     body:
       encoding: US-ASCII
       string: ''
@@ -60,7 +60,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 10 Jul 2013 10:16:15 GMT
+      - Thu, 11 Jul 2013 04:20:32 GMT
       P3p:
       - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
         TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
@@ -145,8 +145,8 @@ http_interactions:
         IDxsZXZlbF9ubz4zPC9sZXZlbF9ubz4KICAgICAgICA8bmFtZT48IVtDREFU
         QVvomZXnkIblmahdXT48L25hbWU+CiAgICAgICAgPHR5cGU+PCFbQ0RBVEFb
         5Y2AXV0+PC90eXBlPgoJCQk8L2NhdGVnb3J5Pgo8L2NhdGVnb3JpZXM+CiAK
-        PCEtLSBwdG5yZjYuc2hwLnR3MS55YWhvby5jb20gY29tcHJlc3NlZC9jaHVu
-        a2VkIFdlZCBKdWwgMTAgMTg6MTY6MTUgQ1NUIDIwMTMgLS0+Cg==
+        PCEtLSBwdG5yZjUuc2hwLnR3MS55YWhvby5jb20gY29tcHJlc3NlZC9jaHVu
+        a2VkIFRodSBKdWwgMTEgMTI6MjA6MzIgQ1NUIDIwMTMgLS0+Cg==
     http_version: 
-  recorded_at: Wed, 10 Jul 2013 10:16:15 GMT
+  recorded_at: Thu, 11 Jul 2013 04:20:32 GMT
 recorded_with: VCR 2.5.0

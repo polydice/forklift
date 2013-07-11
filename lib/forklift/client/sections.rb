@@ -3,7 +3,7 @@ module Forklift
   class Client
     module Sections
       def sections(parent_hash={no: 0})
-        get_catalog(no: parent_hash[:no] || parent_hash["no"], level_no: 0)["categories"]
+        going_down(no: parent_hash[:no] || parent_hash["no"], level_no: 0)
       end
     end
   end
