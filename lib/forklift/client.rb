@@ -99,7 +99,6 @@ module Forklift
     #include Forklift::Client::Sites
     #include Forklift::Client::Categories
     #include Forklift::Client::Subcategories
-    
     private
 
     def create_catalog(catalog = {no: 0, level_no: 0, name: "", type: ""})
@@ -109,6 +108,5 @@ module Forklift
     def create_gd(gd)
       return Forklift::Client::Gd.new(self, gd)
     end
-
   end
 end
