@@ -39,17 +39,13 @@ module Forklift
       self.user_agent          = DEFAULT_USER_AGENT
       self.auto_traversal      = DEFAULT_AUTO_TRAVERSAL
 
+      if init_options[:api_key].nil? or init_options[:shared_secret].nil?
+        raise ArgumentError, "You need give me api_key and shared_secret"
+      end
+
       VALID_OPTIONS_KEYS.each do |key|
         send("#{key}=", init_options[key]) unless init_options[key].nil?
       end
-    end
-
-    def create_catalog(catalog = {no: 0, level_no: 0, name: "", type: ""})
-      return Forklift::Client::Catalog.new(self, catalog)
-    end
-
-    def create_gd(gd)
-      return Forklift::Client::Gd.new(self, gd)
     end
 
     # Alias for getting the sub-categories of certain category.
@@ -103,5 +99,16 @@ module Forklift
     #include Forklift::Client::Sites
     #include Forklift::Client::Categories
     #include Forklift::Client::Subcategories
+    
+    private
+
+    def create_catalog(catalog = {no: 0, level_no: 0, name: "", type: ""})
+      return Forklift::Client::Catalog.new(self, catalog)
+    end
+
+    def create_gd(gd)
+      return Forklift::Client::Gd.new(self, gd)
+    end
+
   end
 end

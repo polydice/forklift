@@ -2,20 +2,17 @@
 require 'helper'
 
 describe Forklift do
-  describe ".respond_to?" do
-    it "is true if method exists" do
-      expect(Forklift.respond_to?(:new, true)).to eq(true)
-    end
-  end
-
   describe ".new" do
     it "is a Forklift::Client" do
-      puts Forklift.new.api_key
-      expect(Forklift.new).to be_a Forklift::Client
+      expect(Forklift.new(api_key: :haha, shared_secret: :hahaha)).to be_a Forklift::Client
+    end
+
+    it "need api_key and shared_secret" do
+      expect { Forklift.new }.to raise_error ArgumentError
     end
 
     it "has default options" do
-      forklift = Forklift.new
+      forklift = Forklift.new(api_key: :haha, shared_secret: :hahaha)
       expect(forklift.api_version).to eq('v1/')
     end
 

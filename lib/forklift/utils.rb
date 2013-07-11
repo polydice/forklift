@@ -8,11 +8,11 @@ module Forklift
       result[:count] = data["count"]
       case target.to_sym
       when :catalog
-        result[:catalogs] = data["category"].map do |hash|
+        result[:catalogs] = data["category"].nil? ? [] : data["category"].map do |hash|
             send("create_catalog", hash)
         end
       when :gd
-        result[:gds] = data["gd"].map do |hash|
+        result[:gds] = data["gd"].nil? ? [] : data["gd"].map do |hash|
             send("create_gd", hash)
         end
       end
