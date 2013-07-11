@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 11 Jul 2013 08:33:39 GMT
+      - Thu, 11 Jul 2013 08:33:41 GMT
       P3p:
       - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
         TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
@@ -38,12 +38,12 @@ http_interactions:
       encoding: UTF-8
       string: |
         <?xml version='1.0' encoding='utf-8'?>
-              <currentTime>1373531619</currentTime><!-- ptnrf6.shp.tw1.yahoo.com compressed/chunked Thu Jul 11 16:33:39 CST 2013 -->
+              <currentTime>1373531621</currentTime><!-- ptnrf6.shp.tw1.yahoo.com compressed/chunked Thu Jul 11 16:33:41 CST 2013 -->
     http_version: 
-  recorded_at: Thu, 11 Jul 2013 08:33:39 GMT
+  recorded_at: Thu, 11 Jul 2013 08:33:41 GMT
 - request:
     method: get
-    uri: http://tw.partner.buy.yahoo.com/api/v1/getCatalog?level_no=2&no=1&pkey=f1a44ca958229205e7894070f0433f7c&signature=fdbb80a1d3bbffbf2a0ff7b496b3a2ba5f629e9a&ts=1373531619
+    uri: http://tw.partner.buy.yahoo.com/api/v1/getCatalog?level_no=2&no=1&pkey=f1a44ca958229205e7894070f0433f7c&signature=46717b519ecfe8a5bc331eab88f2d4c928d8718a&ts=1373531621
     body:
       encoding: US-ASCII
       string: ''
@@ -60,7 +60,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 11 Jul 2013 08:33:39 GMT
+      - Thu, 11 Jul 2013 08:33:41 GMT
       P3p:
       - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
         TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
@@ -146,7 +146,7 @@ http_interactions:
         QVvomZXnkIblmahdXT48L25hbWU+CiAgICAgICAgPHR5cGU+PCFbQ0RBVEFb
         5Y2AXV0+PC90eXBlPgoJCQk8L2NhdGVnb3J5Pgo8L2NhdGVnb3JpZXM+CiAK
         PCEtLSBwdG5yZjUuc2hwLnR3MS55YWhvby5jb20gY29tcHJlc3NlZC9jaHVu
-        a2VkIFRodSBKdWwgMTEgMTY6MzM6MzkgQ1NUIDIwMTMgLS0+Cg==
+        a2VkIFRodSBKdWwgMTEgMTY6MzM6NDEgQ1NUIDIwMTMgLS0+Cg==
     http_version: 
-  recorded_at: Thu, 11 Jul 2013 08:33:39 GMT
+  recorded_at: Thu, 11 Jul 2013 08:33:41 GMT
 recorded_with: VCR 2.5.0

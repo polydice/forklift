@@ -12,4 +12,5 @@ module Forklift
   class ApiOverused < Error; end
   class NoPermission < Error; end
   class SignatureError < Error; end
+  class SystemError < Error; end
 end

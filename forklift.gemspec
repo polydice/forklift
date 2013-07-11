@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Forklift::VERSION
   spec.authors       = ["Yi-Ru Lin"]
   spec.email         = ["lawrence@polydice.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{An API wrapper for Yahoo.}
+  spec.summary       = %q{An API wrapper for Yahoo.}
   spec.homepage      = "https://github.com/polydice/forklift"
   spec.license       = "MIT"
 
