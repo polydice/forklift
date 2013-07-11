@@ -22,12 +22,12 @@ describe Forklift::Client do
       expect(@client.going_down(no: 1, level_no: 2)).to be_a Hash
     end
 
-    it "has category as key" do
-      expect(@client.going_down(no: 1, level_no: 2).has_key?("category")).to eq(true)
+    it "has :catalogs as key" do
+      expect(@client.going_down(no: 1, level_no: 2).has_key?(:catalogs)).to eq(true)
     end
 
     it "going down next level_no" do
-      expect(@client.going_down(no:1, level_no: 2)["category"].first["level_no"]).to eq("3")
+      expect(@client.going_down(no:1, level_no: 2)[:catalogs].first.level_no).to eq("3")
     end
   end
 
@@ -36,12 +36,12 @@ describe Forklift::Client do
       expect(@client.unboxing(no: 1, level_no: 2)).to be_a Hash
     end
 
-    it "has gd as key" do
-      expect(@client.unboxing(no: 1, level_no: 2).has_key?("gd")).to eq(true)
+    it "has :gds as key" do
+      expect(@client.unboxing(no: 1, level_no: 2).has_key?(:gds)).to eq(true)
     end
 
     it "really has goods" do
-      expect(@client.unboxing(no:1, level_no: 2)["gd"].first.has_key?("gd_id")).to eq(true)
+      expect(@client.unboxing(no:1, level_no: 2)[:gds].first).to be_a Forklift::Client::Gd
     end
   end
 end

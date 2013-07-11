@@ -1,6 +1,7 @@
 # -*- encoding : utf-8 -*-
 require 'forklift/connection'
 require 'forklift/request'
+require 'forklift/utils'
 
 require 'forklift/client/gd'
 require 'forklift/client/catalog'
@@ -54,32 +55,34 @@ module Forklift
     # Alias for getting the sub-categories of certain category.
     # e.g. sites of certain section, categories of certain site
     def going_down(parent_hash={no: 0, level_no: 0})
-      no       = parent_hash[:no]       || parent_hash["no"]
-      level_no = parent_hash[:level_no] || parent_hash["level_no"]
+      no       = sym_or_str_key(parent_hash, :no)
+      level_no = sym_or_str_key(parent_hash, :level_no)
 
       if no.nil? or level_no.nil?
         return {}
       else
-        return get_catalog(no: no, level_no: level_no)["categories"]
+        return create_from_collection(get_catalog(no: no, level_no: level_no)["categories"], :catalog)
       end
     end
 
     # Alias for Forklift.new(api_key: ..., shared_secret: ...).gds(parent_hash)
     def unboxing(parent_hash={no: 0, level_no: 0})
-      no       = parent_hash[:no]       || parent_hash["no"]
-      level_no = parent_hash[:level_no] || parent_hash["level_no"]
+      no       = sym_or_str_key(parent_hash, :no)
+      level_no = sym_or_str_key(parent_hash, :level_no)
 
-      get_gd_info(no: no, level_no: level_no)["gds"]
+      create_from_collection(get_gd_info(no: no, level_no: level_no)["gds"], :gd)
     end
 
     VALID_CATALOGS.each_with_index do |name, level_no|
       define_method(name) do |parent_hash={no: 0}|
-        going_down(no: parent_hash[:no] || parent_hash["no"], level_no: level_no)
+        no = sym_or_str_key(parent_hash, :no)
+        going_down(no: no, level_no: level_no)
       end
     end
 
     include Forklift::Connection
     include Forklift::Request
+    include Forklift::Utils
     #include Forklift::Client::Gds
     #include Forklift::Client::Root
     #include Forklift::Client::Sections

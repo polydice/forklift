@@ -11,23 +11,11 @@ module Forklift
       end
 
       def going_down
-        data = @client.going_down(no: @no, level_no: @level_no)
-        result = {}
-        result[:count]    = data["count"]
-        result[:catalogs] = data["category"].map do |catalog_hash|
-          @client.create_catalog(catalog_hash)
-        end
-        return result
+        @client.going_down(no: @no, level_no: @level_no)
       end
 
       def unboxing
-        data = @client.unboxing(no: @no, level_no: @level_no)
-        result = {}
-        result[:count] = data["count"]
-        result[:gd]    = data["gd"].map do |gd_hash|
-          @client.create_gd(gd_hash)
-        end
-        return result
+        @client.unboxing(no: @no, level_no: @level_no)
       end
     end
   end
