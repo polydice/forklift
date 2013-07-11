@@ -1,5 +1,9 @@
 # Forklift
 
+[![Build Status](https://travis-ci.org/polydice/forklift.png?branch=master)](https://travis-ci.org/polydice/forklift)
+[![Code Climate](https://codeclimate.com/github/polydice/forklift.png)](https://codeclimate.com/github/polydice/forklift)
+[![Coverage Status](https://coveralls.io/repos/polydice/forklift/badge.png?branch=master)](https://coveralls.io/r/polydice/forklift?branch=master)
+
 TODO: Write a gem description
 
 ## Installation
