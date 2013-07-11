@@ -24,22 +24,35 @@ Or install it yourself as:
 ```ruby
 client = Forklift.new(api_key: 'xxxx', shared_secret: 'axxxx')
 # Get all sections under the root.
-sections = client.sections # => {"count" => 123, "category" => [{"no" => 1, "level_no" => 1, ...}, {...}, ...]}
+sections = client.sections # => {:count=>"32", :catalogs=>[#<Forklift::Client::Catalog:0x007fd49a91c028 ....]}
 
-# Get all sites under a specified section.
-sites = client.sites(sections["category"].first)
+# Pass a Forklift::Client::Catalog to get all sites under a specified section.
+sites = client.sites(sections[:catalogs].first)
 # Or pass the parent no.
 sites = client.sites(no: 123)
 
 # Similarly to categories, subcategories ...
 subcategories = client.subcategories(no: 345)
+subcategories = client.subcategories(category)
+
+# You can going down from a specified no and level_no
+client.going_down(no: 3, level_no: 1)
+# moreover, going down from a specified catalog
+section = sections[:catalogs].first
+section.going_down
 ```
 
 ### Get all goods under certain category
 
 ```ruby
 client = Forklift.new(api_key: 'xxxx', shared_secret: 'axxxx')
-gds = client.gds({no: 26, level_no: 1})
+gds = client.unboxing({no: 26, level_no: 1})
+
+# Or pass a Forklift::Client::Catalog 
+gds = client.unboxing({no: 26, level_no: 1})
+
+# unboxing from a specified catalog 
+gds = section.unboxing
 ```
 
 ## Contributing

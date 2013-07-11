@@ -43,5 +43,10 @@ describe Forklift::Client do
     it "really has goods" do
       expect(@client.unboxing(no:1, level_no: 2)[:gds].first).to be_a Forklift::Client::Gd
     end
+
+    it "can pass Forklift::Client::Catalog" do
+      site = @client.sites(no: 3)[:catalogs].first
+      expect(@client.unboxing(site)[:gds].first).to be_a Forklift::Client::Gd
+    end
   end
 end
