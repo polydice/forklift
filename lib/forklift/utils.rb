@@ -1,19 +1,19 @@
 # -*- encoding : utf-8 -*-
 module Forklift
   module Utils
-    # data = {"count" => 123, "gd" => [...]}
+    # collection = {"count" => 123, "gd" => [...]}
     # target = gd or catalog
-    def create_from_collection(data, target)
+    def create_from_collection(collection, target, client)
       result = {}
-      result[:count] = data["count"]
+      result[:count] = collection["count"]
       case target.to_sym
       when :catalog
-        result[:catalogs] = data["category"].nil? ? [] : data["category"].map do |hash|
-            send("create_catalog", hash)
+        result[:catalogs] = collection["category"].nil? ? [] : collection["category"].map do |hash|
+          Forklift::Client::Catalog.new(client, hash)
         end
       when :gd
-        result[:gds] = data["gd"].nil? ? [] : data["gd"].map do |hash|
-            send("create_gd", hash)
+        result[:gds] = collection["gd"].nil? ? [] : collection["gd"].map do |hash|
+          Forklift::Client::Gd.new(client, hash)
         end
       end
 

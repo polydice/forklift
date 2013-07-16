@@ -57,7 +57,7 @@ module Forklift
       if no.nil? or level_no.nil?
         return {}
       else
-        return create_from_collection(get_catalog(no: no, level_no: level_no)["categories"], :catalog)
+        return create_from_collection(get_catalog(no: no, level_no: level_no)["categories"], :catalog, self)
       end
     end
 
@@ -68,9 +68,9 @@ module Forklift
         no       = sym_or_str_key(parent, :no)
         level_no = sym_or_str_key(parent, :level_no)
 
-        create_from_collection(get_gd_info(no: no, level_no: level_no)["gds"], :gd)
+        create_from_collection(get_gd_info(no: no, level_no: level_no)["gds"], :gd, self)
       when Forklift::Client::Catalog
-        create_from_collection(get_gd_info(no: parent.no, level_no: parent.level_no)["gds"], :gd)
+        create_from_collection(get_gd_info(no: parent.no, level_no: parent.level_no)["gds"], :gd, self)
       else
         {}
       end
@@ -93,20 +93,5 @@ module Forklift
     include Forklift::Connection
     include Forklift::Request
     include Forklift::Utils
-    #include Forklift::Client::Gds
-    #include Forklift::Client::Root
-    #include Forklift::Client::Sections
-    #include Forklift::Client::Sites
-    #include Forklift::Client::Categories
-    #include Forklift::Client::Subcategories
-    private
-
-    def create_catalog(catalog = {no: 0, level_no: 0, name: "", type: ""})
-      return Forklift::Client::Catalog.new(self, catalog)
-    end
-
-    def create_gd(gd)
-      return Forklift::Client::Gd.new(self, gd)
-    end
   end
 end
