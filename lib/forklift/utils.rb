@@ -8,13 +8,29 @@ module Forklift
       result[:count] = collection["count"]
       case target.to_sym
       when :catalog
-        result[:catalogs] = collection["category"].nil? ? [] : collection["category"].map do |hash|
-          Forklift::Client::Catalog.new(client, hash)
+
+        if result[:count].to_i == 1
+          result[:catalogs] = [Forklift::Client::Catalog.new(client, collection["category"])]
+        elsif result[:count].to_i > 1
+          result[:catalogs] = collection["category"].map do |hash|
+            Forklift::Client::Catalog.new(client, hash)
+          end
+        else
+          result[:catalogs] = []
         end
+
       when :gd
-        result[:gds] = collection["gd"].nil? ? [] : collection["gd"].map do |hash|
-          Forklift::Client::Gd.new(client, hash)
+
+        if result[:count].to_i == 1
+          result[:gds] = [Forklift::Client::Gd.new(client, collection["gd"])]
+        elsif result[:count].to_i > 1
+          result[:gds] = collection["gd"].nil? ? [] : collection["gd"].map do |hash|
+            Forklift::Client::Gd.new(client, hash)
+          end
+        else
+          result[:gds] = []
         end
+
       end
 
       return result
