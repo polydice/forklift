@@ -36,8 +36,9 @@ module Forklift
       return result
     end
 
-    def sym_or_str_key(hash, key)
+    def sym_or_str_key(hash, key, default=nil)
       result = hash[key.to_sym] || hash[key.to_s]
+      result ||= default
       return result
     end
   end

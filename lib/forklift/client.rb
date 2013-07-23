@@ -62,18 +62,20 @@ module Forklift
     end
 
     # Alias for Forklift.new(api_key: ..., shared_secret: ...).gds(parent_hash)
-    def unboxing(parent={no: 0, level_no: 0})
-      case parent
-      when Hash
+    def unboxing(parent={no: 0, level_no: 0, page: 1, ps: 50})
+
+      if catalog = sym_or_str_key(parent, :catalog)
+        no       = catalog.no
+        level_no = catalog.level_no
+      else
         no       = sym_or_str_key(parent, :no)
         level_no = sym_or_str_key(parent, :level_no)
-
-        create_from_collection(get_gd_info(no: no, level_no: level_no)["gds"], :gd, self)
-      when Forklift::Client::Catalog
-        create_from_collection(get_gd_info(no: parent.no, level_no: parent.level_no)["gds"], :gd, self)
-      else
-        {}
       end
+
+      page = sym_or_str_key(parent, :page, 1)
+      ps   = sym_or_str_key(parent, :ps, 50)
+
+      create_from_collection(get_gd_info(no: no, level_no: level_no, page: page, ps: ps)["gds"], :gd, self)
     end
 
     VALID_CATALOGS.each_with_index do |name, level_no|

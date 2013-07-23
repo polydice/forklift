@@ -76,7 +76,7 @@ module Forklift
     def get_signature(options)
       content = Faraday::Utils::ParamsHash
                   .new
-                  .replace( options.select {|k, v| k.to_s.match(/pkey|ts|no|level_no/)} )
+                  .replace( options.select {|k, v| k.to_s.match(/pkey|ts|no|level_no|ps|page/)} )
                   .to_query
 
       digest = OpenSSL::Digest::Digest.new('sha1')

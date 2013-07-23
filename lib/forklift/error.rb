@@ -13,4 +13,5 @@ module Forklift
   class NoPermission < Error; end
   class SignatureError < Error; end
   class SystemError < Error; end
+  class PageSizeError < Error; end
 end

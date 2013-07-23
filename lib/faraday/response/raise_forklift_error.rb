@@ -19,7 +19,8 @@ module Faraday
       "\n  API OVERUSED\n"                                  => Forklift::ApiOverused,
       "\n  no permission to request!\n"                     => Forklift::NoPermission,
       "\n  signature was not match or timestamp is over!\n" => Forklift::SignatureError,
-      "\n  code:302,desc:system error\n"                    => Forklift::SystemError
+      "\n  code:302,desc:system error\n"                    => Forklift::SystemError,
+      "\n  page size must between 5 and 50\n"               => Forklift::PageSizeError
     }
 
     def on_complete(response)

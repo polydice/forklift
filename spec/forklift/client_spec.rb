@@ -46,7 +46,12 @@ describe Forklift::Client do
 
     it "can pass Forklift::Client::Catalog" do
       site = @client.sites(no: 3)[:catalogs].first
-      expect(@client.unboxing(site)[:gds].first).to be_a Forklift::Client::Gd
+      expect(@client.unboxing(catalog: site)[:gds].first).to be_a Forklift::Client::Gd
+    end
+
+    it "can pass page nad ps" do
+      site = @client.sites(no: 3)[:catalogs].first
+      expect(@client.unboxing(catalog: site, page: 3, ps: 10)[:gds].size).to eq(10)
     end
   end
 end
