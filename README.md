@@ -57,6 +57,10 @@ gds = client.unboxing({no: 26, level_no: 1})
 
 # unboxing from a specified catalog 
 gds = section.unboxing
+
+# specify the page and page size
+gds = client.unboxing(no: 26, level_no:1, page: 5, ps: 30)
+gds = section.unboxing(page: 5, ps: 30)
 ```
 
 ## Contributing
